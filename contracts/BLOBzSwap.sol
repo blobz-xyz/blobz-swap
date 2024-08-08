@@ -6,9 +6,9 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract BLOBzSwap is Ownable {
 
-    IERC20 public tokenA;             // $BLOBz 18 decimals
-    IERC20 public tokenB;             // $USDC   6 decimals
-    uint256 public exchangeRate = 1;  // *** TODO ***
+    IERC20 public tokenA;                   // $BLOBz 18 decimals
+    IERC20 public tokenB;                   // $USDC   6 decimals
+    uint256 public exchangeRate = 10**18;   // 1M (6) + decimal diff (12)
     bool public isActive = true;
 
     constructor(address initialOwner) Ownable(initialOwner) {
